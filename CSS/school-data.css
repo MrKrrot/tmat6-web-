@@ -1,0 +1,160 @@
+.infout{
+    display: flex;
+    padding: 2vh;
+    margin: 10vh;
+}
+
+.infotxt{
+    padding: 1vh;
+    width: 60%;
+}
+
+.infout h1{
+    color: #27A384;
+}
+
+.infout h4{
+    color: #053ea3;
+}
+.infout p{
+    margin-top: 2vh;
+}
+
+.infoimg{
+    width: 40%;
+    height: auto;
+}
+
+.infout img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.infoextra{
+    display: flex;
+    padding: 2vh;
+    margin: 10vh;
+    height: 80vh;
+}
+
+.geolocalizacion{
+    width: 40%;
+    height: 100%;
+}
+
+.galeria{
+    width: 60%;
+    height: 100%;
+}
+
+.geolocalizacion span{
+    display: flex;
+    align-items: center;
+    padding: 1vh;
+}
+
+.dirreccion span{
+    font-size: 2vh;
+}
+
+.dirreccion::after{
+    content: '';
+    background: #DC143C;
+    width: 5%;
+    height: 3px;
+    position: absolute;
+}
+
+.piegaleria::after{
+    content: '';
+    background: #DC143C;
+    width: 5%;
+    height: 3px;
+    position: absolute;
+}
+
+.piegaleria span{
+    display: flex;
+    align-items: center;
+    padding: 1vh;
+}
+
+.dirrecciontxt{
+    padding: 4vh;
+    background-color: whitesmoke;
+    margin-top: 1vh;
+    margin-bottom: 1vh;
+}
+
+.galeriaimg{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.galeriaimg img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.cajagaleria{
+    padding: 2vh;
+    height: 100%;
+    width: 100%;
+}
+
+@media (max-width: 1024px) {
+    .infout{
+        flex-direction: column;
+        margin: 0;
+    }
+
+    .infout img{
+        width: 100%;
+    }
+
+    .infoimg{
+        width: auto;
+    }
+
+    .infotxt{
+        width: 100%;
+    }
+
+    .infoextra{
+        flex-direction: column;
+        margin: 0;
+    }
+
+    .geolocalizacion{
+        width: 100%;
+    }
+
+    .geolocalizacion iframe{
+        height: 80vh;
+    }
+
+    .dirreccion::after{
+        width: 20%;
+    }
+
+    .piegaleria::after{
+        width: 20%;
+    }
+
+    .cajagaleria{
+        padding: 0;
+    }
+
+    .galeria{
+        width: 100%;
+    }
+
+    .infoextra{
+        height: auto;
+    }
+}

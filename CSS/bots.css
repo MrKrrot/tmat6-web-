@@ -1,0 +1,185 @@
+#menu {
+    position: relative;
+    background: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 70vh;
+}
+.container-card {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-auto-rows: auto;
+    grid-gap: 5rem;
+    margin-top: 4em;
+  }
+  
+  .container-card .card:after {
+    content: 'TMAT6';
+    position: absolute;
+    top: 30%;
+    left: -20%;
+    font-size: 12em;
+    font-weight: 800;
+    font-style: italic;
+    color: rgba(255,255,255,0.04);
+  }
+  
+  .card {
+    position: relative;
+    width: 320px;
+    height: 450px;
+    background: #131313;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 5px 5px 30px rgba(0, 0, 0, 0.3);
+  }
+  
+  .container-card .card .fx {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: #000;
+    clip-path: circle(150px at 80% 20%);
+    transition: 0.5s ease-in-out;
+    text-align: center;
+  }
+  
+  .container-card .card:hover .fx,
+  .container-card .card .fx:hover{
+    clip-path: circle(200px at 50% 5%);
+  }
+  
+  .container-card .card:nth-child(1) .fx,
+  .container-card .card:nth-child(1) .content-card a {
+    background: #DC143C;
+  }
+  
+  .container-card .card:nth-child(2) .fx,
+  .container-card .card:nth-child(2) .content-card a {
+    background: #DC143C;
+  }
+  
+  .container-card .card:nth-child(3) .fx,
+  .container-card .card:nth-child(3) .content-card a {
+    background: #DC143C;
+  }
+  
+  .container-card .card .imgBx {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 1;
+    width: 100%;
+    height: 220px;
+    transition: 0.5s;
+  }
+  
+  .container-card .card:hover .imgBx {
+    top: 0%;
+    transform: translateY(0%);
+  }
+  
+  .container-card .card .imgBx img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 140px;
+  }
+  
+  .container-card .card .contentBx {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 100px;
+    text-align: center;
+    transition: 0.5s;
+    z-index: 10;
+  }
+  
+  .container-card .card:hover .contentBx {
+    height: 210px;
+  }
+  
+  .container-card .card .contentBx h2 {
+    position: relative;
+    font-weight: 600;
+    letter-spacing: 1px;
+    color: #fff;
+  }
+  
+  .container-card .card .contentBx .size {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 20px;
+    transition: 0.5s;
+    opacity: 0;
+    visibility: hidden;
+  }
+  
+  .container-card .card:hover .contentBx .size{
+    opacity: 1;
+    visibility: visible;
+    transition-delay: 0.5s;
+  }
+  
+  
+  .container-card .card .contentBx .size h3 {
+    color: #fff;
+    font-weight: 300;
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-right: 10px;
+  }
+  
+  .container-card .card .contentBx .size span {
+    width: 26px;
+    height: 26px;
+    text-align: center;
+    line-height: 26px;
+    font-size: 14px;
+    display: inline-block;
+    color: #111;
+    background: #fff;
+    margin: 0 5px;
+    transition: 0.5s;
+    color: #111;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .container-card .card .contentBx .size span:hover {
+    background: #017143;
+  }
+  
+  .container-card .card .contentBx a {
+    display: inline-block;
+    padding: 10px 20px;
+    background: #fff;
+    border-radius: 4px;
+    margin-top: 10px;
+    text-decoration: none;
+    font-weight: 600;
+    color: #111;
+    opacity: 0;
+    transform: translateY(50px);
+    transition: 0.5s;
+  }
+  
+  .container-card .card:hover .contentBx a {
+    opacity: 1;
+    transform: translateY(0px);
+    transition-delay: 0.5s;
+  }
+
+  @media (max-width: 1024px) {
+  
+    .container-card{
+      grid-template-columns: repeat(1,1fr);
+    }
+
+  }
